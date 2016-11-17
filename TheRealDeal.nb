@@ -1,0 +1,562 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24256,        553]
+NotebookOptionsPosition[     23921,        536]
+NotebookOutlinePosition[     24279,        552]
+CellTagsIndexPosition[     24236,        549]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"sol", "=", 
+      RowBox[{"DSolve", "[", 
+       RowBox[{
+        RowBox[{"{", " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"SC", "'"}], "[", "t", "]"}], "\[Equal]", " ", 
+           RowBox[{"\[CapitalLambda]H", "-", 
+            RowBox[{"\[Beta]", "*", 
+             RowBox[{"Exp", "[", 
+              RowBox[{"-", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Tau]", "^", "2"}], "*", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}], "/", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Alpha]", "^", "2"}], "+", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}]}], ")"}]}], "]"}], "*", 
+             FractionBox[
+              RowBox[{"IV", "[", "t", "]"}], 
+              RowBox[{"NC", "[", "t", "]"}]], "*", 
+             RowBox[{"SC", "[", "t", "]"}]}], "+", 
+            RowBox[{"\[Gamma]c", "*", 
+             RowBox[{"IC", "[", "t", "]"}]}], "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"v", "+", "\[Mu]c"}], ")"}], "*", 
+             RowBox[{"SC", "[", "t", "]"}]}]}]}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"IC", "'"}], "[", "t", "]"}], "==", 
+           RowBox[{
+            RowBox[{"\[Beta]", "*", 
+             RowBox[{"Exp", "[", 
+              RowBox[{"-", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Tau]", "^", "2"}], "*", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}], "/", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Alpha]", "^", "2"}], "+", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}]}], ")"}]}], "]"}], "*", 
+             FractionBox[
+              RowBox[{"IV", "[", "t", "]"}], 
+              RowBox[{"NC", "[", "t", "]"}]], "*", 
+             RowBox[{"SC", "[", "t", "]"}]}], "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"\[Gamma]c", "+", "\[Mu]c"}], ")"}], "*", 
+             RowBox[{"IC", "[", "t", "]"}]}]}]}], ",", "\[IndentingNewLine]", 
+          " ", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Sa", "'"}], "[", "t", "]"}], "\[Equal]", " ", 
+           RowBox[{
+            RowBox[{"v", "*", 
+             RowBox[{"SC", "[", "t", "]"}]}], "-", 
+            RowBox[{"\[Beta]", "*", 
+             RowBox[{"Exp", "[", 
+              RowBox[{"-", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Tau]", "^", "2"}], "*", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}], "/", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Alpha]", "^", "2"}], "+", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}]}], ")"}]}], "]"}], "*", 
+             FractionBox[
+              RowBox[{"IV", "[", "t", "]"}], 
+              RowBox[{"Na", "[", "t", "]"}]], "*", 
+             RowBox[{"Sa", "[", "t", "]"}]}], "+", 
+            RowBox[{"\[Gamma]a", "*", 
+             RowBox[{"IA", "[", "t", "]"}]}], "-", 
+            RowBox[{"\[Mu]a", "*", 
+             RowBox[{"Sa", "[", "t", "]"}]}]}]}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"IA", "'"}], "[", "t", "]"}], "\[Equal]", " ", 
+           RowBox[{
+            RowBox[{"\[Beta]", "*", 
+             RowBox[{"Exp", "[", 
+              RowBox[{"-", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Tau]", "^", "2"}], "*", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}], "/", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Alpha]", "^", "2"}], "+", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}]}], ")"}]}], "]"}], "*", 
+             FractionBox[
+              RowBox[{"IV", "[", "t", "]"}], 
+              RowBox[{"Na", "[", "t", "]"}]], "*", 
+             RowBox[{"Sa", "[", "t", "]"}]}], "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"\[Gamma]a", "+", "\[Mu]a"}], ")"}], "*", 
+             RowBox[{"IA", "[", "t", "]"}]}]}]}], ",", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"SV", "'"}], "[", "t", "]"}], "\[Equal]", " ", 
+           RowBox[{"\[CapitalLambda]v", "-", 
+            RowBox[{"\[Mu]v", "*", 
+             RowBox[{"SV", "[", "t", "]"}]}], "-", 
+            RowBox[{"\[Beta]", "*", "\[Beta]", "*", 
+             RowBox[{"Exp", "[", 
+              RowBox[{"-", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Tau]", "^", "2"}], "*", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}], "/", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Alpha]", "^", "2"}], "+", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}]}], ")"}]}], "]"}], "*", 
+             FractionBox[
+              RowBox[{"IC", "[", "t", "]"}], 
+              RowBox[{"SC", "[", "t", "]"}]], "*", 
+             RowBox[{"SV", "[", "t", "]"}]}], " ", "-", 
+            RowBox[{"\[Beta]", "*", "\[Beta]", "*", 
+             RowBox[{"Exp", "[", 
+              RowBox[{"-", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Tau]", "^", "2"}], "*", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}], "/", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Alpha]", "^", "2"}], "+", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}]}], ")"}]}], "]"}], "*", 
+             FractionBox[
+              RowBox[{"IA", "[", "t", "]"}], 
+              RowBox[{"Sa", "[", "t", "]"}]], "*", 
+             RowBox[{"SV", "[", "t", "]"}]}]}]}], ",", "  ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"IV", "'"}], "[", "t", "]"}], "\[Equal]", "  ", 
+           RowBox[{
+            RowBox[{"\[Beta]", "*", "\[Beta]", "*", 
+             RowBox[{"Exp", "[", 
+              RowBox[{"-", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Tau]", "^", "2"}], "*", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}], "/", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Alpha]", "^", "2"}], "+", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}]}], ")"}]}], "]"}], "*", 
+             FractionBox[
+              RowBox[{"IC", "[", "t", "]"}], 
+              RowBox[{"SC", "[", "t", "]"}]], "*", 
+             RowBox[{"SV", "[", "t", "]"}]}], "+", " ", 
+            RowBox[{"\[Beta]", "*", "\[Beta]", "*", 
+             RowBox[{"Exp", "[", 
+              RowBox[{"-", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Tau]", "^", "2"}], "*", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}], "/", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"\[Alpha]", "^", "2"}], "+", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"IC", "[", "t", "]"}], "+", 
+                    RowBox[{"IA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], 
+                  ")"}]}], ")"}]}], "]"}], "*", 
+             FractionBox[
+              RowBox[{"IA", "[", "t", "]"}], 
+              RowBox[{"Sa", "[", "t", "]"}]], "*", 
+             RowBox[{"SV", "[", "t", "]"}]}], "-", 
+            RowBox[{"\[Mu]v", "*", 
+             RowBox[{"IV", "[", "t", "]"}]}]}]}], "\[IndentingNewLine]", ",", 
+          
+          RowBox[{
+           RowBox[{"SC", "[", "0", "]"}], "\[Equal]", "0"}], ",", 
+          RowBox[{
+           RowBox[{"IC", "[", "0", "]"}], "\[Equal]", "10000"}], ",", 
+          RowBox[{
+           RowBox[{"Sa", "[", "0", "]"}], "\[Equal]", "1"}], ",", 
+          RowBox[{
+           RowBox[{"IA", "[", "0", "]"}], "\[Equal]", "1000000"}], ",", " ", 
+          RowBox[{
+           RowBox[{"SV", "[", "0", "]"}], "\[Equal]", " ", "1"}], ",", " ", 
+          RowBox[{
+           RowBox[{"IV", "[", "0", "]"}], "\[Equal]", " ", "1"}]}], "}"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"SC", "[", "t", "]"}], ",", " ", 
+          RowBox[{"IC", "[", "t", "]"}], ",", " ", 
+          RowBox[{"Sa", "[", "t", "]"}], ",", 
+          RowBox[{"IA", "[", "t", "]"}], ",", 
+          RowBox[{"SV", "[", "t", "]"}], ",", 
+          RowBox[{"IV", "[", "t", "]"}]}], "}"}], ",", "t"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"Evaluate", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"IA", "[", "t", "]"}], "/.", "sol"}], ",", " ", 
+          RowBox[{
+           RowBox[{"IC", "[", "t", "]"}], "/.", "sol"}]}], "}"}], "]"}], ",", 
+       
+       RowBox[{"{", 
+        RowBox[{"t", ",", 
+         RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Tau]", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Alpha]", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Beta]", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[CapitalLambda]H", " ", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Gamma]c", " ", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Gamma]a", " ", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"v", " ", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Mu]c", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Mu]a", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[CapitalLambda]v", ",", "0", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Mu]v", ",", "0", ",", "1"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQB2IQbZPXb/Gn6rXjfZMl7iCae8WRYBDdGvcfTLPGr4wF
+0d+WHwPTh95+SgPR8+awZYHofTaJBSB61mnREhB9fVNSBYi+NvtFFYg+I8VV
+D6KbZsl1gOjCtK/9IFo/gG8CiP53PGwaiLb73g+mp7yVmguiXf55LALRlr3i
+y0E02+l0MO3AvmADiJ6kwLMVRC8tnb8TRO8KrdsLojtE246B6IqEWWDaw/Xd
+KbB4tMEFEK394/I1EJ03Pfw6iP5ya9EDEL1/ldFDsPs+ZzwF0cUnPoLp5mnl
+tX+B9I+rtTNBtMLBS/NBdMH6DwtA9L4fOmtBtOiJjC0g+rmU0w4Q7TWnfg+I
+njzH+DCIbgtJAdMATSve9Q==
+  "]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`v$$ = 0, $CellContext`\[Alpha]$$ = 
+    0, $CellContext`\[Beta]$$ = 0, $CellContext`\[Gamma]a$$ = 
+    1., $CellContext`\[Gamma]c$$ = 0.074, $CellContext`\[CapitalLambda]H$$ = 
+    0, $CellContext`\[CapitalLambda]v$$ = 0., $CellContext`\[Mu]a$$ = 
+    0.45, $CellContext`\[Mu]c$$ = 0.756, $CellContext`\[Mu]v$$ = 
+    0, $CellContext`\[Tau]$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Tau]$$], 0, 1}, {
+      Hold[$CellContext`\[Alpha]$$], 0, 1}, {
+      Hold[$CellContext`\[Beta]$$], 0, 1}, {
+      Hold[$CellContext`\[CapitalLambda]H$$], 0, 1}, {
+      Hold[$CellContext`\[Gamma]c$$], 0, 1}, {
+      Hold[$CellContext`\[Gamma]a$$], 0, 1}, {
+      Hold[$CellContext`v$$], 0, 1}, {
+      Hold[$CellContext`\[Mu]c$$], 0, 1}, {
+      Hold[$CellContext`\[Mu]a$$], 0, 1}, {
+      Hold[$CellContext`\[CapitalLambda]v$$], 0, 1}, {
+      Hold[$CellContext`\[Mu]v$$], 0, 1}}, Typeset`size$$ = {
+    360., {111., 115.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Tau]$82809$$ = 
+    0, $CellContext`\[Alpha]$82810$$ = 0, $CellContext`\[Beta]$82811$$ = 
+    0, $CellContext`\[CapitalLambda]H$82812$$ = 
+    0, $CellContext`\[Gamma]c$82813$$ = 0, $CellContext`\[Gamma]a$82814$$ = 
+    0, $CellContext`v$82815$$ = 0, $CellContext`\[Mu]c$82816$$ = 
+    0, $CellContext`\[Mu]a$82817$$ = 
+    0, $CellContext`\[CapitalLambda]v$82818$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`v$$ = 0, $CellContext`\[Alpha]$$ = 
+        0, $CellContext`\[Beta]$$ = 0, $CellContext`\[Gamma]a$$ = 
+        0, $CellContext`\[Gamma]c$$ = 0, $CellContext`\[CapitalLambda]H$$ = 
+        0, $CellContext`\[CapitalLambda]v$$ = 0, $CellContext`\[Mu]a$$ = 
+        0, $CellContext`\[Mu]c$$ = 0, $CellContext`\[Mu]v$$ = 
+        0, $CellContext`\[Tau]$$ = 0}, "ControllerVariables" :> {
+        Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$82809$$, 0], 
+        Hold[$CellContext`\[Alpha]$$, $CellContext`\[Alpha]$82810$$, 0], 
+        Hold[$CellContext`\[Beta]$$, $CellContext`\[Beta]$82811$$, 0], 
+        Hold[$CellContext`\[CapitalLambda]H$$, \
+$CellContext`\[CapitalLambda]H$82812$$, 0], 
+        Hold[$CellContext`\[Gamma]c$$, $CellContext`\[Gamma]c$82813$$, 0], 
+        Hold[$CellContext`\[Gamma]a$$, $CellContext`\[Gamma]a$82814$$, 0], 
+        Hold[$CellContext`v$$, $CellContext`v$82815$$, 0], 
+        Hold[$CellContext`\[Mu]c$$, $CellContext`\[Mu]c$82816$$, 0], 
+        Hold[$CellContext`\[Mu]a$$, $CellContext`\[Mu]a$82817$$, 0], 
+        Hold[$CellContext`\[CapitalLambda]v$$, \
+$CellContext`\[CapitalLambda]v$82818$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`sol = 
+        DSolve[{Derivative[
+            1][$CellContext`SC][$CellContext`t] == $CellContext`\
+\[CapitalLambda]H$$ - $CellContext`\[Beta]$$ 
+            Exp[-(($CellContext`\[Tau]$$^2 ($CellContext`IC[$CellContext`t] + \
+$CellContext`IA[$CellContext`t])^2)/($CellContext`\[Alpha]$$^2 + \
+($CellContext`IC[$CellContext`t] + $CellContext`IA[$CellContext`t])^2))] \
+($CellContext`IV[$CellContext`t]/$CellContext`NC[$CellContext`t]) \
+$CellContext`SC[$CellContext`t] + $CellContext`\[Gamma]c$$ \
+$CellContext`IC[$CellContext`t] - ($CellContext`v$$ + $CellContext`\[Mu]c$$) \
+$CellContext`SC[$CellContext`t], 
+           Derivative[
+            1][$CellContext`IC][$CellContext`t] == $CellContext`\[Beta]$$ 
+             Exp[-(($CellContext`\[Tau]$$^2 ($CellContext`IC[$CellContext`t] + \
+$CellContext`IA[$CellContext`t])^2)/($CellContext`\[Alpha]$$^2 + \
+($CellContext`IC[$CellContext`t] + $CellContext`IA[$CellContext`t])^2))] \
+($CellContext`IV[$CellContext`t]/$CellContext`NC[$CellContext`t]) \
+$CellContext`SC[$CellContext`t] - ($CellContext`\[Gamma]c$$ + $CellContext`\
+\[Mu]c$$) $CellContext`IC[$CellContext`t], 
+           Derivative[
+            1][$CellContext`Sa][$CellContext`t] == $CellContext`v$$ \
+$CellContext`SC[$CellContext`t] - $CellContext`\[Beta]$$ 
+            Exp[-(($CellContext`\[Tau]$$^2 ($CellContext`IC[$CellContext`t] + \
+$CellContext`IA[$CellContext`t])^2)/($CellContext`\[Alpha]$$^2 + \
+($CellContext`IC[$CellContext`t] + $CellContext`IA[$CellContext`t])^2))] \
+($CellContext`IV[$CellContext`t]/$CellContext`Na[$CellContext`t]) \
+$CellContext`Sa[$CellContext`t] + $CellContext`\[Gamma]a$$ \
+$CellContext`IA[$CellContext`t] - $CellContext`\[Mu]a$$ \
+$CellContext`Sa[$CellContext`t], 
+           Derivative[
+            1][$CellContext`IA][$CellContext`t] == $CellContext`\[Beta]$$ 
+             Exp[-(($CellContext`\[Tau]$$^2 ($CellContext`IC[$CellContext`t] + \
+$CellContext`IA[$CellContext`t])^2)/($CellContext`\[Alpha]$$^2 + \
+($CellContext`IC[$CellContext`t] + $CellContext`IA[$CellContext`t])^2))] \
+($CellContext`IV[$CellContext`t]/$CellContext`Na[$CellContext`t]) \
+$CellContext`Sa[$CellContext`t] - ($CellContext`\[Gamma]a$$ + $CellContext`\
+\[Mu]a$$) $CellContext`IA[$CellContext`t], 
+           Derivative[
+            1][$CellContext`SV][$CellContext`t] == $CellContext`\
+\[CapitalLambda]v$$ - $CellContext`\[Mu]v$$ $CellContext`SV[$CellContext`t] - \
+$CellContext`\[Beta]$$ $CellContext`\[Beta]$$ 
+            Exp[-(($CellContext`\[Tau]$$^2 ($CellContext`IC[$CellContext`t] + \
+$CellContext`IA[$CellContext`t])^2)/($CellContext`\[Alpha]$$^2 + \
+($CellContext`IC[$CellContext`t] + $CellContext`IA[$CellContext`t])^2))] \
+($CellContext`IC[$CellContext`t]/$CellContext`SC[$CellContext`t]) \
+$CellContext`SV[$CellContext`t] - $CellContext`\[Beta]$$ \
+$CellContext`\[Beta]$$ 
+            Exp[-(($CellContext`\[Tau]$$^2 ($CellContext`IC[$CellContext`t] + \
+$CellContext`IA[$CellContext`t])^2)/($CellContext`\[Alpha]$$^2 + \
+($CellContext`IC[$CellContext`t] + $CellContext`IA[$CellContext`t])^2))] \
+($CellContext`IA[$CellContext`t]/$CellContext`Sa[$CellContext`t]) \
+$CellContext`SV[$CellContext`t], 
+           Derivative[
+            1][$CellContext`IV][$CellContext`t] == $CellContext`\[Beta]$$ \
+$CellContext`\[Beta]$$ 
+             Exp[-(($CellContext`\[Tau]$$^2 ($CellContext`IC[$CellContext`t] + \
+$CellContext`IA[$CellContext`t])^2)/($CellContext`\[Alpha]$$^2 + \
+($CellContext`IC[$CellContext`t] + $CellContext`IA[$CellContext`t])^2))] \
+($CellContext`IC[$CellContext`t]/$CellContext`SC[$CellContext`t]) \
+$CellContext`SV[$CellContext`t] + $CellContext`\[Beta]$$ \
+$CellContext`\[Beta]$$ 
+             Exp[-(($CellContext`\[Tau]$$^2 ($CellContext`IC[$CellContext`t] + \
+$CellContext`IA[$CellContext`t])^2)/($CellContext`\[Alpha]$$^2 + \
+($CellContext`IC[$CellContext`t] + $CellContext`IA[$CellContext`t])^2))] \
+($CellContext`IA[$CellContext`t]/$CellContext`Sa[$CellContext`t]) \
+$CellContext`SV[$CellContext`t] - $CellContext`\[Mu]v$$ \
+$CellContext`IV[$CellContext`t], $CellContext`SC[0] == 0, $CellContext`IC[0] == 
+           10000, $CellContext`Sa[0] == 1, $CellContext`IA[0] == 
+           1000000, $CellContext`SV[0] == 1, $CellContext`IV[0] == 1}, {
+           $CellContext`SC[$CellContext`t], 
+           $CellContext`IC[$CellContext`t], 
+           $CellContext`Sa[$CellContext`t], 
+           $CellContext`IA[$CellContext`t], 
+           $CellContext`SV[$CellContext`t], 
+           $CellContext`IV[$CellContext`t]}, $CellContext`t]; Plot[
+         Evaluate[{
+           ReplaceAll[
+            $CellContext`IA[$CellContext`t], $CellContext`sol], 
+           ReplaceAll[
+            $CellContext`IC[$CellContext`t], $CellContext`sol]}], \
+{$CellContext`t, -1, 1}]), 
+      "Specifications" :> {{$CellContext`\[Tau]$$, 0, 
+         1}, {$CellContext`\[Alpha]$$, 0, 1}, {$CellContext`\[Beta]$$, 0, 
+         1}, {$CellContext`\[CapitalLambda]H$$, 0, 
+         1}, {$CellContext`\[Gamma]c$$, 0, 1}, {$CellContext`\[Gamma]a$$, 0, 
+         1}, {$CellContext`v$$, 0, 1}, {$CellContext`\[Mu]c$$, 0, 
+         1}, {$CellContext`\[Mu]a$$, 0, 1}, {$CellContext`\[CapitalLambda]v$$,
+          0, 1}, {$CellContext`\[Mu]v$$, 0, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{637., {168., 174.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.688358464623363*^9, 3.6883584964976788`*^9, 3.688358571295282*^9, {
+   3.688358622825776*^9, 3.688358640430461*^9}, 3.688358743942721*^9, {
+   3.688358789218431*^9, 3.688358874085837*^9}, {3.688358910569872*^9, 
+   3.688358978959272*^9}, {3.688359042844047*^9, 3.688359054025899*^9}, {
+   3.6883590955667057`*^9, 3.6883591088428993`*^9}, {3.6883591780163927`*^9, 
+   3.688359229759858*^9}, {3.688359322668069*^9, 3.6883593384821033`*^9}, {
+   3.68835938271078*^9, 3.688359406483473*^9}, 3.688359480942464*^9, 
+   3.688359515137286*^9, {3.688359559566818*^9, 3.688359574868486*^9}, 
+   3.688359612874625*^9, 3.688359731777564*^9, {3.688361072466344*^9, 
+   3.6883610942633247`*^9}, 3.688361173992581*^9, 3.688361230299646*^9, {
+   3.68836133333857*^9, 3.688361449559545*^9}, 3.688361506236589*^9}]
+}, Open  ]]
+},
+WindowSize->{826, 701},
+WindowMargins->{{153, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 13663, 342, 720, "Input"],
+Cell[14246, 366, 9659, 167, 370, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
